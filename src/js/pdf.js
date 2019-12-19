@@ -18,7 +18,7 @@ export default {
     // Get the file through a http request (Preload)
     let req = new window.XMLHttpRequest()
     req.responseType = 'arraybuffer'
-
+    req.withCredentials = 'true';
     req.addEventListener('load', () => {
       // Check for errors
       if ([200, 201].indexOf(req.status) === -1) {
